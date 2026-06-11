@@ -7,8 +7,9 @@ Este repositório centraliza e organiza todos os materiais de estudo para a prov
 ## ⚡ Links Rápidos e Flashcards
 
 *   📚 **NotebookLM Flashcards:** [Acesse os Flashcards Interativos no NotebookLM](https://notebooklm.google.com/notebook/cd4eef03-6b11-48f8-bc0b-fe926fd23ff9/artifact/8036fd93-7856-42cc-b02e-a4947a9a2736?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_) (Ótimo para revisar termos e conceitos fundamentais antes da prova!).
-*   📖 **E-book EPUB para Kindle:** [compilados/Curso_Gestao_Crises_IA_Completo.epub](./compilados/Curso_Gestao_Crises_IA_Completo.epub)
-*   🔌 **E-book AZW3 para Kindle (Cabo USB):** [compilados/Curso_Gestao_Crises_IA_Completo.azw3](./compilados/Curso_Gestao_Crises_IA_Completo.azw3)
+*   📖 **E-book KFX para Kindle (Transferência USB - Alta Definição):** [compilados/Curso_Gestao_Crises_IA_Completo.kfx](./compilados/Curso_Gestao_Crises_IA_Completo.kfx)
+*   📖 **E-book EPUB para Kindle (Envio via Nuvem):** [compilados/Curso_Gestao_Crises_IA_Completo.epub](./compilados/Curso_Gestao_Crises_IA_Completo.epub)
+*   🔌 **E-book AZW3 para Kindle (Cabo USB - Legado):** [compilados/Curso_Gestao_Crises_IA_Completo.azw3](./compilados/Curso_Gestao_Crises_IA_Completo.azw3)
 *   📄 **PDF Completo Unificado:** [compilados/Curso_Gestao_Crises_IA_Completo.pdf](./compilados/Curso_Gestao_Crises_IA_Completo.pdf)
 
 ---
@@ -23,6 +24,7 @@ O repositório está organizado da seguinte forma:
 │   └── ...
 ├── compilados/                     # Versões consolidadas de estudo
 │   ├── Curso_Gestao_Crises_IA_Completo.pdf    # PDF com todos os capítulos unidos
+│   ├── Curso_Gestao_Crises_IA_Completo.kfx    # KFX nativo (alta definição com sumário, fontes e hifenização)
 │   ├── Curso_Gestao_Crises_IA_Completo.epub   # EPUB com índice e formatação fluida (Kindle Cloud)
 │   ├── Curso_Gestao_Crises_IA_Completo.azw3   # AZW3 com sumário integrado (Kindle USB)
 │   ├── Curso_Gestao_Crises_IA_Completo.html   # Versão HTML estruturada
@@ -109,8 +111,10 @@ A Amazon converterá o arquivo automaticamente e aplicará o motor de renderiza�
 3.  Clique em **Enviar**. Em alguns minutos, o livro aparecerá sincronizado na biblioteca do seu Kindle (via Wi-Fi).
 
 ### Método 2: Transferência por Cabo USB (Instantâneo e Offline)
+Para transferir diretamente sem depender da nuvem:
+
 1.  Conecte o Kindle ao computador pelo cabo USB.
-2.  Copie o arquivo AZW3 localizado em `compilados/Curso_Gestao_Crises_IA_Completo.azw3`.
+2.  Copie o arquivo KFX localizado em `compilados/Curso_Gestao_Crises_IA_Completo.kfx` (ou o AZW3 em `compilados/Curso_Gestao_Crises_IA_Completo.azw3`). O arquivo KFX é altamente recomendado, pois oferece suporte nativo de Enhanced Typesetting, fontes avançadas e paginação perfeita.
 3.  Cole o arquivo diretamente dentro da pasta `documents` na raiz do seu Kindle.
 4.  Ejete o dispositivo com segurança. O livro estará disponível imediatamente na biblioteca.
 
@@ -134,8 +138,9 @@ Se você quiser alterar os estilos ou reprocessar os textos:
     ```bash
     python scripts/markdown_to_html.py
     ```
-5.  *(Opcional)* Se você tiver o Calibre instalado, converta o HTML resultante para os formatos de e-reader:
+5.  *(Opcional)* Se você tiver o Calibre instalado com o plugin **KFX Output** e o **Kindle Previewer 3**, converta o HTML resultante para os formatos de e-reader:
     ```bash
     ebook-convert compilados/Curso_Gestao_Crises_IA_Completo.html compilados/Curso_Gestao_Crises_IA_Completo.epub
     ebook-convert compilados/Curso_Gestao_Crises_IA_Completo.html compilados/Curso_Gestao_Crises_IA_Completo.azw3
+    ebook-convert compilados/Curso_Gestao_Crises_IA_Completo.html compilados/Curso_Gestao_Crises_IA_Completo.kfx
     ```
